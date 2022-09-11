@@ -37,7 +37,7 @@ number_12=$(	echo ${number_11//DD/M}		)		# replace DD to M		- number 1000 (M)
 number_13=$(	echo ${number_12//DCD/CM}	)		# replace DCD to CM		- number  900 (CM)
 
 
-printf "Arabic number (${GRE}${input}${NC}) = Roman number ${YEL}${number_13}${NC}"
+printf "Arabic number (${GRE}${input}${NC}) = Roman number ${YEL}${number_13}${NC}\n"
 
 
 # uncoment next line to display conversion steps
