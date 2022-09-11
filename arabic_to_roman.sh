@@ -15,7 +15,7 @@ YEL='\033[0;33m'	# Yellow
 printf "input Arabic number: ${GRE}";declare -i input; read input
 printf "${NC}\n"
 
-number_01=$(										# vrites I input times (input * I) in variable
+number_01=$(										# vrites I "input" times (input * I) in variable
  for i in $(eval echo "{1..$input}")
 	do
 		printf "I"
