@@ -12,7 +12,7 @@ YEL='\033[0;33m'	# Yellow
 
 ######################################################## Colors	####
 
-printf "input number: ${GRE}";declare -i input; read input
+printf "input Arabic number: ${GRE}";declare -i input; read input
 printf "${NC}\n"
 
 number_01=$(										# vrites I input times (input * I) in variable
