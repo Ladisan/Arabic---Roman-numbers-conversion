@@ -42,3 +42,4 @@ printf "Arabic number (${GRE}${input}${NC}) = Roman number ${YEL}${number_13}${N
 
 # uncoment next line to display conversion steps
 # printf "\n\n\n${PUR}Conversion steps: ${NC}\n\n${GRE}01${NC} - ${CYA}${number_01}${NC}\n${GRE}02${NC} - ${BLUE}${number_02}${NC}\n${GRE}03${NC} - ${CYA}${number_03}${NC}\n${GRE}04${NC} - ${BLUE}${number_04}${NC}\n${GRE}05${NC} - ${CYA}${number_05}${NC}\n${GRE}06${NC} - ${BLUE}${number_06}${NC}\n${GRE}07${NC} - ${CYA}${number_07}${NC}\n${GRE}08${NC} - ${BLUE}${number_08}${NC}\n${GRE}09${NC} - ${CYA}${number_09}${NC}\n${GRE}10${NC} - ${BLUE}${number_10}${NC}\n${GRE}11${NC} - ${CYA}${number_11}${NC}\n${GRE}12${NC} - ${BLUE}${number_12}${NC}\n${GRE}13${NC} - ${CYA}${number_13}${NC}\n"
+
