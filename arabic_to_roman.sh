@@ -9,6 +9,7 @@ PUR='\033[0;35m' 	# Purple
 CYA='\033[0;36m'	# Cyan
 GRE='\033[0;32m'	# Green
 BLUE='\e[34m'		# Blue
+YEL='\033[0;33m'	# Yellow
 
 ######################################################## Colors	####
 
@@ -36,7 +37,7 @@ number_12=$(	echo ${number_11//DD/M}		)		# replace DD to M		- number 1000 (M)
 number_13=$(	echo ${number_12//DCD/CM}	)		# replace DCD to CM		- number  900 (CM)
 
 
-printf "Arabic number (${GRE}${input}${NC}) = Roman number ${BLUE}${number_13}${NC}"
+printf "Arabic number (${GRE}${input}${NC}) = Roman number ${YEL}${number_13}${NC}"
 
 
 # uncoment next line to display conversion steps
