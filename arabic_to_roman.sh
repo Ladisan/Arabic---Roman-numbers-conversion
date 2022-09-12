@@ -2,7 +2,7 @@
  
 # solution from https://www.youtube.com/watch?v=nrVIlhtoE3Y&t=2227s
 
-#### Colors	########################################################
+#### Colors ########################################################
 
 NC='\033[0m' 		# No Color
 PUR='\033[0;35m' 	# Purple
@@ -12,9 +12,7 @@ YEL='\033[0;33m'	# Yellow
 
 ######################################################## Colors	####
 
-	function arabic2roman {	# converts arabic number to roman number
- 
-# solution from https://www.youtube.com/watch?v=nrVIlhtoE3Y&t=2227s
+
 
 printf "input Arabic number: ${GRE}";declare -i input; read input
 printf "${NC}\n"
@@ -24,7 +22,7 @@ number_01=$(										# vrites I "input" times (input * I) in variable
 	do
 		printf "I"
 	done
-				)			
+				)
 
 number_02=$(	echo ${number_01//IIIII/V}	)		# replace IIIII to V	- number    5 (V)
 number_03=$(	echo ${number_02//IIII/IV}	)		# replace IIII to IV	- number    4 (IV)
@@ -71,31 +69,15 @@ number_13=$(	echo ${number_12//DCD/CM}	)		# replace DCD to CM	- number  900 (CM)
 		printf "Arabic number (${GRE}${input}${NC}) = Roman number ${YEL}${number_13}${NC}\n"
 
 		fi
-					
-# cow say output - workd in winows/cigwin bash (Mobaxtrem)
+
+
+# cow say output
 	if [[ $1 = "cow" ]]
 		then
-			printf -v cwsayS "\ Arabic number (${GRE}${input}${NC}) = Roman number ${YEL}${number_13}${NC}"
+			printf "Arabic number (${GRE}${input}${NC}) = Roman number ${YEL}${number_13}${NC}" | cowsay
 			cws
 	fi
-		}
-
-alias {roman,ROMAN,2roman,2ROMAN}='arabic2roman'
 
 
-	function cws {		# COW says for script 0.1
-printf "\n"
-	echo "cow says :"
-echo " "
-echo "   ------------------------------------- "
-printf "   "; printf "$cwsayS" ; echo "        "
-echo "     ----------------------------------- "
-echo "        \   ^__^				"
-echo "         \  (oo)\_______			"
-echo "            (__)\       )\/\		"
-echo "                ||----w |			"
-echo "                ||     ||			"
-echo "						"
-	}
-
-	
+																
+																# script by {LK} 09-2022
