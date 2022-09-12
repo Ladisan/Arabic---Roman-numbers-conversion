@@ -12,6 +12,10 @@ YEL='\033[0;33m'	# Yellow
 
 ######################################################## Colors	####
 
+	function arabic2roman {	# converts arabic number to roman number
+ 
+# solution from https://www.youtube.com/watch?v=nrVIlhtoE3Y&t=2227s
+
 printf "input Arabic number: ${GRE}";declare -i input; read input
 printf "${NC}\n"
 
@@ -36,9 +40,62 @@ number_12=$(	echo ${number_11//DD/M}		)		# replace DD to M	- number 1000 (M)
 number_13=$(	echo ${number_12//DCD/CM}	)		# replace DCD to CM	- number  900 (CM)
 
 
-printf "Arabic number (${GRE}${input}${NC}) = Roman number ${YEL}${number_13}${NC}\n"
+# function without any variable
+	 if [ -z "$1" ]
+  		then
+	printf "Arabic number (${GRE}${input}${NC}) = Roman number ${YEL}${number_13}${NC}\n"
+	fi
 
 
-# uncoment next line to display conversion steps
-# printf "\n\n\n${PUR}Conversion steps: ${NC}\n\n${GRE}01${NC} - ${CYA}${number_01}${NC}\n${GRE}02${NC} - ${BLUE}${number_02}${NC}\n${GRE}03${NC} - ${CYA}${number_03}${NC}\n${GRE}04${NC} - ${BLUE}${number_04}${NC}\n${GRE}05${NC} - ${CYA}${number_05}${NC}\n${GRE}06${NC} - ${BLUE}${number_06}${NC}\n${GRE}07${NC} - ${CYA}${number_07}${NC}\n${GRE}08${NC} - ${BLUE}${number_08}${NC}\n${GRE}09${NC} - ${CYA}${number_09}${NC}\n${GRE}10${NC} - ${BLUE}${number_10}${NC}\n${GRE}11${NC} - ${CYA}${number_11}${NC}\n${GRE}12${NC} - ${BLUE}${number_12}${NC}\n${GRE}13${NC} - ${CYA}${number_13}${NC}\n"
 
+# shows conversion steps when starting function with "man" parameter: "arabic2roman man"
+	if [[ $1 = "man" ]]
+	then
+		printf -v man_a2r_00 "\\n\n${PUR}Conversion steps: ${NC}\n\n"
+		printf -v man_a2r_01 "${GRE}01${NC} - ${CYA}${number_01}${NC}\n\n"
+		printf -v man_a2r_02 "${GRE}02${NC} - ${CYA}${number_02}${NC}\n\n"
+		printf -v man_a2r_03 "${GRE}03${NC} - ${CYA}${number_03}${NC}\n\n"
+		printf -v man_a2r_04 "${GRE}04${NC} - ${CYA}${number_04}${NC}\n\n"
+		printf -v man_a2r_05 "${GRE}05${NC} - ${CYA}${number_05}${NC}\n\n"
+		printf -v man_a2r_06 "${GRE}06${NC} - ${CYA}${number_06}${NC}\n\n"
+		printf -v man_a2r_07 "${GRE}07${NC} - ${CYA}${number_07}${NC}\n\n"
+		printf -v man_a2r_08 "${GRE}08${NC} - ${CYA}${number_08}${NC}\n\n"
+		printf -v man_a2r_09 "${GRE}09${NC} - ${CYA}${number_09}${NC}\n\n"
+		printf -v man_a2r_10 "${GRE}10${NC} - ${CYA}${number_10}${NC}\n\n"
+		printf -v man_a2r_11 "${GRE}11${NC} - ${CYA}${number_11}${NC}\n\n"
+		printf -v man_a2r_12 "${GRE}12${NC} - ${CYA}${number_12}${NC}\n\n"
+		printf -v man_a2r_13 "${GRE}13${NC} - ${CYA}${number_13}${NC}\n\n"
+
+		printf "${man_a2r_00}${man_a2r_01}${man_a2r_02}${man_a2r_03}${man_a2r_04}${man_a2r_05}${man_a2r_06}${man_a2r_07}${man_a2r_08}${man_a2r_09}${man_a2r_10}${man_a2r_11}${man_a2r_12}${man_a2r_13}"
+		printf "\n\n"
+		printf "Arabic number (${GRE}${input}${NC}) = Roman number ${YEL}${number_13}${NC}\n"
+
+		fi
+					
+# cow say output - workd in winows/cigwin bash (Mobaxtrem)
+	if [[ $1 = "cow" ]]
+		then
+			printf -v cwsayS "\ Arabic number (${GRE}${input}${NC}) = Roman number ${YEL}${number_13}${NC}"
+			cws
+	fi
+		}
+
+alias {roman,ROMAN,2roman,2ROMAN}='arabic2roman'
+
+
+	function cws {		# COW says for script 0.1
+printf "\n"
+	echo "cow says :"
+echo " "
+echo "   ------------------------------------- "
+printf "   "; printf "$cwsayS" ; echo "        "
+echo "     ----------------------------------- "
+echo "        \   ^__^				"
+echo "         \  (oo)\_______			"
+echo "            (__)\       )\/\		"
+echo "                ||----w |			"
+echo "                ||     ||			"
+echo "						"
+	}
+
+	
