@@ -45,46 +45,43 @@ number_11=$(	echo ${number_10//CCCC/CD}	)		# replace CCCC to CD	- number  400 (C
 number_12=$(	echo ${number_11//DD/M}		)		# replace DD to M	- number 1000 (M)
 number_13=$(	echo ${number_12//DCD/CM}	)		# replace DCD to CM	- number  900 (CM)
 
-
-# function without any variable
-  if [ -z "$1" ]
-  then
-			printf "Arabic number (${GRE}${input}${NC}) = Roman number ${YEL}${number_13}${NC}\n"
-	fi
-
-
-
 # shows conversion steps when starting function with "man" parameter: "arabic2roman man"
 	if [[ ${1,,} = "man" ]]	
-	then
+		then
+	
 		printf -v man_a2r_00 "\\n\n${PUR}Conversion steps: ${NC}\n\n"
-		printf -v man_a2r_01 "${GRE}01${NC} - ${CYA}${number_01}${NC}\n\n"
-		printf -v man_a2r_02 "${GRE}02${NC} - ${CYA}${number_02}${NC}\n\n"
-		printf -v man_a2r_03 "${GRE}03${NC} - ${CYA}${number_03}${NC}\n\n"
-		printf -v man_a2r_04 "${GRE}04${NC} - ${CYA}${number_04}${NC}\n\n"
-		printf -v man_a2r_05 "${GRE}05${NC} - ${CYA}${number_05}${NC}\n\n"
-		printf -v man_a2r_06 "${GRE}06${NC} - ${CYA}${number_06}${NC}\n\n"
-		printf -v man_a2r_07 "${GRE}07${NC} - ${CYA}${number_07}${NC}\n\n"
-		printf -v man_a2r_08 "${GRE}08${NC} - ${CYA}${number_08}${NC}\n\n"
-		printf -v man_a2r_09 "${GRE}09${NC} - ${CYA}${number_09}${NC}\n\n"
-		printf -v man_a2r_10 "${GRE}10${NC} - ${CYA}${number_10}${NC}\n\n"
-		printf -v man_a2r_11 "${GRE}11${NC} - ${CYA}${number_11}${NC}\n\n"
-		printf -v man_a2r_12 "${GRE}12${NC} - ${CYA}${number_12}${NC}\n\n"
-		printf -v man_a2r_13 "${GRE}13${NC} - ${CYA}${number_13}${NC}\n\n"
+		printf -v man_a2r_01 "${GRE}01${NC} (input->I) - ${CYA}${number_01}${NC}\n\n"
+		printf -v man_a2r_02 "${GRE}02${NC} (IIIII->V) - ${CYA}${number_02}${NC}\n\n"
+		printf -v man_a2r_03 "${GRE}03${NC} (IIII->IV) - ${CYA}${number_03}${NC}\n\n"
+		printf -v man_a2r_04 "${GRE}04${NC} (VV->X) - ${CYA}${number_04}${NC}\n\n"
+		printf -v man_a2r_05 "${GRE}05${NC} (VIV->IX) - ${CYA}${number_05}${NC}\n\n"
+		printf -v man_a2r_06 "${GRE}06${NC} (XXXXX->L) - ${CYA}${number_06}${NC}\n\n"
+		printf -v man_a2r_07 "${GRE}07${NC} (XXXX->XL) - ${CYA}${number_07}${NC}\n\n"
+		printf -v man_a2r_08 "${GRE}08${NC} (LL->C) - ${CYA}${number_08}${NC}\n\n"
+		printf -v man_a2r_09 "${GRE}09${NC} (LXL->XC) - ${CYA}${number_09}${NC}\n\n"
+		printf -v man_a2r_10 "${GRE}10${NC} (CCCCC->D) - ${CYA}${number_10}${NC}\n\n"
+		printf -v man_a2r_11 "${GRE}11${NC} (CCCC->CD) - ${CYA}${number_11}${NC}\n\n"
+		printf -v man_a2r_12 "${GRE}12${NC} (DD->M) - ${CYA}${number_12}${NC}\n\n"
+		printf -v man_a2r_13 "${GRE}13${NC} (DCD->CM) - ${CYA}${number_13}${NC}\n\n"
 
 		printf "${man_a2r_00}${man_a2r_01}${man_a2r_02}${man_a2r_03}${man_a2r_04}${man_a2r_05}${man_a2r_06}${man_a2r_07}${man_a2r_08}${man_a2r_09}${man_a2r_10}${man_a2r_11}${man_a2r_12}${man_a2r_13}"
 		printf "\n\n"
 		printf "Arabic number (${GRE}${input}${NC}) = Roman number ${YEL}${number_13}${NC}\n"
 
-		fi
-
-# cow say output
-	if [[ ${1,,} = "cow" ]]
+# cow say output	
+	elif [[ ${1,,} = "cow" ]]
 		then
 			printf -v cwsayS "\ Arabic number (${GRE}${input}${NC}) = Roman number ${YEL}${number_13}${NC}"
 			cws
-	fi
-																					#fn by {LK} 09-2022
+
+# function without any variable or with some random "text" variable
+	else
+		
+		printf "Arabic number (${GRE}${input}${NC}) = Roman number ${YEL}${number_13}${NC}\n"
+
+		fi
+
+																			#fn by {LK} 09-2022																					#fn by {LK} 09-2022
 								}
 
 		alias {roman,ROMAN,2roman,2ROMAN}='arabic2roman'
