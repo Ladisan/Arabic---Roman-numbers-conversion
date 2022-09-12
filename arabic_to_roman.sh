@@ -47,7 +47,7 @@ number_13=$(	echo ${number_12//DCD/CM}	)		# replace DCD to CM	- number  900 (CM)
 
 
 # shows conversion steps when starting function with "man" parameter: "arabic2roman man"
-	if [[ $1 = "man" ]]
+	if [[ ${1,,} = "man" ]]	
 	then
 		printf -v man_a2r_00 "\\n\n${PUR}Conversion steps: ${NC}\n\n"
 		printf -v man_a2r_01 "${GRE}01${NC} - ${CYA}${number_01}${NC}\n\n"
@@ -72,7 +72,7 @@ number_13=$(	echo ${number_12//DCD/CM}	)		# replace DCD to CM	- number  900 (CM)
 
 
 # cow say output
-	if [[ $1 = "cow" ]]
+	if [[ ${1,,} = "cow" ]]
 		then
 			printf "Arabic number (${GRE}${input}${NC}) = Roman number ${YEL}${number_13}${NC}" | cowsay
 			cws
