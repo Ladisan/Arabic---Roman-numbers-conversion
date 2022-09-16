@@ -64,8 +64,8 @@ number_13=$(	echo ${number_12//DCD/CM}	)		# replace DCD to CM	- number  900 (CM)
 # cow say output
 	elif [[ ${1,,} = "cow" ]]
 		then
-			printf -v cwsayS "\ Arabic number (${GRE}${input}${NC}) = Roman number ${YEL}${number_13}${NC}"
-			cws
+			printf "\ Arabic number (${GRE}${input}${NC}) = Roman number ${YEL}${number_13}${NC}" | cowsay
+
 
 # function without any variable or with some random "text" variable
 	else
