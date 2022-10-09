@@ -1,7 +1,7 @@
 
 #!/usr/bin/env bash
 
-
+	# https://www.linuxquestions.org/questions/slackware-14/roman-numeral-conversion-4175482477/page2.html
 
 #### Colors    ########################################################################################################
 
@@ -54,3 +54,5 @@ declare -i number_14; number_14=$number_13	# declare variable as number
 
 
 	printf "\nRoman number (${CYA}${input}${NC}) = Arabic number (${GRE}${number_14}${NC})" | cowsay
+	
+
